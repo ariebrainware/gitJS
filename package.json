@@ -1,0 +1,29 @@
+{
+  "name": "learnnodejs",
+  "version": "0.1.0",
+  "description": "Glints academy class section: Learn Node.js and backend environment",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ariebrainware/learnNodeJS.git"
+  },
+  "keywords": [
+    "learn",
+    "nodejs",
+    "backend",
+    "environment"
+  ],
+  "author": "ariebrainware <publicu001@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ariebrainware/learnNodeJS/issues"
+  },
+  "homepage": "https://github.com/ariebrainware/learnNodeJS#readme",
+  "dependencies": {
+    "cli-input": "^0.2.0",
+    "color": "^3.0.0"
+  }
+}
