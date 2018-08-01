@@ -26,17 +26,16 @@ const colorState = (value = "off") => {
 }
 
 const fetchFollowers = (uname) => {
-    const url = `https://api.github.com/users/ariebrainware/followers`
+    const url = `https://api.github.com/users/${uname}/followers`
     fetch(url)
         .then(Response => {
-            Response.json()
+            return Response.json()
         })
         .then(data => {
             console.log(colors.blue(`[v] This is ${uname} followers list: `))
-            console.log(data)
-            // data.forEach(user => {
-            //     console.log(user.login)
-            // });
+            data.forEach(user => {
+                console.log(user.login)
+            });
         })
 }
 // Get user input
@@ -57,7 +56,7 @@ input.question(colors.yellow('[?] What do you want to do?, [A] Running math func
                 console.log(colors.red(`[x] PROGRAM TERMINATED!!`))
                 input.close()
             }
-            // input.close()
+            input.close()
         })
     } else if (answer === 'B') {
         console.log(console.log(colors.green(`[+] You selected B option, running fetch followers function`)))
@@ -76,3 +75,4 @@ input.question(colors.yellow('[?] What do you want to do?, [A] Running math func
         input.close()
     }
 })
+
