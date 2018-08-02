@@ -1,5 +1,5 @@
 {
-  "name": "learnnodejs",
+  "name": "gitJS",
   "version": "0.1.0",
   "description": "Glints academy class section: Learn Node.js and backend environment",
   "main": "index.js",
@@ -16,11 +16,12 @@
   "devDependencies": {},
   "scripts": {
     "test": "node index",
-    "mon": "nodemon index"
+    "mon": "nodemon index",
+    "dev": "node-dev index"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ariebrainware/learnNodeJS.git"
+    "url": "git+https://github.com/ariebrainware/gitJS.git"
   },
   "keywords": [
     "api",
