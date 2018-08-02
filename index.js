@@ -27,12 +27,14 @@ const logo = `
                                     MMMMMMMMMMMWKxl;'........ .  ....':lxKWMMMMMMMMMMM
                                     MMMMMMMMMMMMMMMNKkoc,'......',cokKNMMMMMMMMMMMMMMM
                     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                           gitJS v0.1.0 >< Author : Arie Brainware
 `
 // Import module
 
-const colors = require("colors");
-const readline = require("readline");
-const fetch = require("node-fetch");
+const colors = require(`colors`);
+const readline = require(`readline`);
+const fetch = require(`node-fetch`);
+const send = require(`sendMessage`)
 
 // Function definition
 const consoleColor = (color = "", text = "") => {
@@ -105,6 +107,7 @@ const runSearchRepository = (input) => {
 
 const run = () => {
     consoleColor(`green`,logo)
+
 
     // Get user input
     const input = readline.createInterface({
