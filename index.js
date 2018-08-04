@@ -34,7 +34,7 @@ const logo = `
 const colors = require(`colors`);
 const readline = require(`readline`);
 const fetch = require(`node-fetch`);
-const send = require(`sendMessage`)
+
 
 // Function definition
 const consoleColor = (color = "", text = "") => {
@@ -53,7 +53,7 @@ const fetchFollowers = username => {
             data.forEach(user => {
                 consoleColor(`green`, `[->] Username: ${user.login}, url: ${user.html_url}`)
             });
-        });
+        });        
 };
 // ----------------------------------------------------------------------
 
@@ -64,7 +64,7 @@ const fetchRepo = repoName => {
             return response.json();
         })
         .then(data => {
-            consoleColor(`blue`,`[v] Here the repository result: `)            
+            consoleColor(`blue`, `[v] Here the repository result: `)
 
             const repoItem = data.items;
             repoItem.forEach(repo => {
@@ -87,9 +87,12 @@ const runGitHubFollowers = (input) => {
     consoleColor(`green`, `[+] Running fetch followers function`)
 
     input.question(consoleColor(`yellow`, `[?] Input username target:`), uname => {
-        if (uname != "") fetchFollowers(uname);
-        else consoleError()
-        input.close()    
+        if (uname != "") {
+            fetchFollowers(uname)
+        } else {
+            consoleError()
+        }
+        input.close()
     });
 }
 // ----------------------------------------------------------------------
@@ -106,7 +109,7 @@ const runSearchRepository = (input) => {
 // ----------------------------------------------------------------------
 
 const run = () => {
-    consoleColor(`green`,logo)
+    consoleColor(`green`, logo)
 
 
     // Get user input
@@ -123,7 +126,7 @@ const run = () => {
         answer => {
             if (answer === "A") runGitHubFollowers(input)
             else if (answer === "B") runSearchRepository(input)
-            else consoleError()       
+            else consoleError()
         }
     );
 }
