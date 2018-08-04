@@ -1,6 +1,17 @@
 {
-    "id" : 1,
-    "full-repo-name" : "ariebrainware/learnNodeJS",
-    "http-url": "https://github.com/ariebrainware/learnNodeJS.git",
-    "ssh-url": "git@github.com:ariebrainware/learnNodeJS.git"
+  "counter": 2,
+  "repository": [
+    {
+      "id": 1,
+      "fullRepoName": "ariebrainware/learnNodeJS",
+      "httpURL": "https://github.com/ariebrainware/learnNodeJS.git",
+      "sshURL": "git@github.com:ariebrainware/learnNodeJS.git"
+    },
+    {
+      "id": 2,
+      "fullRepoName": "guntur/glintstodo",
+      "httpURL": "https://github.com/gunturkh/glintstodo.git",
+      "sshURL": "git@github.com:gunturkh/glintstodo.git"
+    }
+  ]
 }
